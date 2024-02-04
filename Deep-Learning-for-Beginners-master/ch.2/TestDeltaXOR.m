@@ -1,4 +1,4 @@
-clear all
+clear
            
 X = [ 0 0 1;
       0 1 1;
@@ -22,5 +22,6 @@ N = 4;                        % inference
 for k = 1:N
   x = X(k, :)';
   v = W*x;
-  y = Sigmoid(v)
+  y = Sigmoid(v);
+  disp([' y_',num2str(k),' = ', num2str(y)])
 end
